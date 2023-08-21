@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  font-family: Sans-Serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to right, #34fed2, #aa3fcd); */
+  background-color: #1e1e1e;
+  font-family: "Caviar Dreams";
+}
+
+.calculator-grid {
+  display: grid;
+  min-height: 98vh;
+  min-width: 98vw;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: minmax(40%, auto) repeat(5, 12%);
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+/*   grid-template-columns: repeat(4, 100px);
+grid-template-rows: minmax(120px, auto) repeat(5, 100px); */
+}
+
+.title {
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  transform: translate(5px, -5px);
+  color: white;
+  background: linear-gradient(to right, #FFDBCB, #66adeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title h1 {
+  font-family: "Caviar Dreams";
+}
+
+button {
+  font-family: "Caviar Dreams";
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .75);
+  outline: none;
+  /* border: 1px solid white; */
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: .1s;
+}
+button[data-number] {
+  color: #FFDBCB;
+  box-shadow: 3px 3px 3px #FFDBCB;
+}
+button[data-all-clear],
+button[data-delete],
+button[data-operation] {
+  color: #66adeb;
+  box-shadow: 3px 3px 3px #66adeb;
+}
+button[data-equals] {
+  color: #F185FF;
+  box-shadow: 3px 3px 3px #F185FF;
+}
+button[data-number]:hover {
+  color: #1e1e1e;
+  background-color: #FFDBCB;
+  /* box-shadow: 3px 3px 3px #FFDBCB; */
+  box-shadow: none;
+}
+button[data-all-clear]:hover,
+button[data-delete]:hover,
+button[data-operation]:hover {
+  color: #1e1e1e;
+  background-color: #66adeb;
+  /* box-shadow: 3px 3px 3px #66adeb; */
+  box-shadow: none;
+}
+button[data-equals]:hover {
+  color: #1e1e1e;
+  background-color: #F185FF;
+  /* box-shadow: 3px 3px 3px #F185FF; */
+  box-shadow: none;
+}
+
+/* button:hover {
+  background-color: rgba(255, 255, 255, .9);
+} */
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: white;
+}
+
+.previous-operand {
+  font-size: 1.3rem;
+  /* color: rgba(255, 255, 255, .8); */
+  color: #FFDBCB;
+  font-family: "Caviar Dreams";
+}
+
+.current-operand {
+  font-size: 2rem;
+  /* color: white; */
+  color: #F185FF;
+  font-family: "Caviar Dreams";
+}
+
+
+
+
+
+/* *,
+*::before,
+*::after {
+  font-family: Sans-Serif;
+  font-weight: normal;
+  box-sizing: border-box;
+} */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #34fed2, #aa3fcd);
+} */
+
+/* .calculator-grid {
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: minmax(20%, auto) repeat(5, 16%);
+grid-template-columns: repeat(4, 100px);
+grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+} */
+
+/* button {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .75);
+  outline: none;
+  border: 1px solid white;
+  font-size: 1.2rem;
+} */
+
+/* button:hover {
+  background-color: rgba(255, 255, 255, .9);
+} */
+
+/* .span-two {
+  grid-column: span 2;
+} */
+
+/* .output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: white;
+} */
+
+/* .previous-operand {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, .8);
+} */
+
+/* .current-operand {
+  font-size: 2rem;
+  color: white;
+} */
